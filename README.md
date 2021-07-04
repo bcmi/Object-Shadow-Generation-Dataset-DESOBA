@@ -28,6 +28,6 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 
 - Download the DESOBA dataset.
 - We provide the code of obtaining synthetic composite images from shadow image and deshadowed image under the file of data_processing. 
--  ```bash
+```bash
 python Vis_Desoba_Dataset.py
 ```
