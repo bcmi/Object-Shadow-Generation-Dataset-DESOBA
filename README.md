@@ -4,7 +4,7 @@ The first dataset on shadow generation for the foreground object in real-world s
 
 **Object Shadow Generation** is to deal with the shadow inconsistency between the foreground object and the background, that is, generating shadow for the foreground object according to background information, to make the composite image more realistic.
 
-Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis ofShadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  providesannotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadowsto construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in below image.
+Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis of Shadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  provides annotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadows to construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in below image.
 
 <img src='Examples/task_intro.png' align="center" width=1024>
 
