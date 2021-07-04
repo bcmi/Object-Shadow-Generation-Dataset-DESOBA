@@ -1,6 +1,6 @@
 # Object-Shadow-Generation-Dataset-DESOBA
 <img src='Examples/task_intro.png' align="center" width=1024>
-The green arrows illustrate the process of acquiring paired data for training and evaluation.  Given a ground-truth target image $\mathbf{I}_{g}$, we manually remove all shadows to produce a deshadowed image $\mathbf{I}_d$. Then, we randomly select a foreground object in $\mathbf{I}_g$, and replace its shadow area with the counterpart in $\mathbf{I}_{d}$ to synthesize a composite image $\mathbf{I}_c$ without foreground shadow. $\mathbf{I}_c$ and $\mathbf{I}_g$ form a pair of input composite image and ground-truth target image. 2) The red arrow illustrates our shadow generation task. Given $\mathbf{I}_c$ and its foreground mask $\bm{M}_{fo}$, we aim to generate the target image $\tilde{\mathbf{I}}_g$ with foreground shadow.
+
 
 The first dataset on shadow generation for the foreground object in real-world scenes.
 
