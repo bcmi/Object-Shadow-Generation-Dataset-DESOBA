@@ -28,7 +28,7 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 
 - Download the DESOBA dataset.
 - 
-- We provide the code of obtaining training/testing tuples, each tuple contains foreground object mask, foreground shadow mask, background object mask, background shadow mask, shadow image, and synthetic composite image without foreground shadow mask. The dataloader is available in '/data_processing/data/DesobaSyntheticImageGeneration_dataset.py', which can be used as dataloader in training phase or testing phase.
+- We provide the code of obtaining training/testing tuples, each tuple contains foreground object mask, foreground shadow mask, background object mask, background shadow mask, shadow image, and synthetic composite image without foreground shadow mask. The dataloader is available in `/data_processing/data/DesobaSyntheticImageGeneration_dataset.py`, which can be used as dataloader in training phase or testing phase.
 
 - We also provide the code of visualization of training/testing tuple, run:
 ```bash
