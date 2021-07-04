@@ -40,5 +40,5 @@ python Vis_Desoba_Dataset.py
 <img src='/data_processing/Visualization_Examples/5.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/6.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/12.png' align="center" width=1024>
-from left to right: shadow image, and synthetic composite image, foreground object mask, foreground shadow mask, background object mask, background shadow mask
+from left to right: synthetic composite image, shadow image, foreground object mask, foreground shadow mask, background object mask, and background shadow mask.
  
