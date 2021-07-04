@@ -35,3 +35,7 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 python Vis_Desoba_Dataset.py
 ```
 `Vis_Desoba_Dataset.py` is available in `/data_processing/`.
+- We show some examples of training/testing tuple in below:
+<img src='/data_processing/Visualization_Examples/8.png' align="center" width=1024>
+
+ 
