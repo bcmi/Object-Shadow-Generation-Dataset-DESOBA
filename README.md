@@ -11,9 +11,9 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. It
 
 ## Prerequisites
 
-- Linux
-- Python 3
-- CPU or NVIDIA GPU + CUDA CuDNN
+- Python 
+- Pytorch
+- PIL
 
 ## Getting Started
 
