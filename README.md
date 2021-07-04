@@ -37,5 +37,8 @@ python Vis_Desoba_Dataset.py
 `Vis_Desoba_Dataset.py` is available in `/data_processing/`.
 - We show some examples of training/testing tuple in below:
 <img src='/data_processing/Visualization_Examples/9.png' align="center" width=1024>
+<img src='/data_processing/Visualization_Examples/5.png' align="center" width=1024>
+<img src='/data_processing/Visualization_Examples/6.png' align="center" width=1024>
+<img src='/data_processing/Visualization_Examples/12.png' align="center" width=1024>
 
  
