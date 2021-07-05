@@ -1,10 +1,9 @@
 # Object-Shadow-Generation-Dataset-DESOBA
 
-The first dataset on shadow generation for the foreground object in real-world scenes.
 
-**Object Shadow Generation** is to deal with the shadow inconsistency between the foreground object and the background, that is, generating shadow for the foreground object according to background information, to make the composite image more realistic.
+**Object Shadow Generation** is to deal with the shadow inconsistency between the foreground object and the background in a composite image, that is, generating shadow for the foreground object according to background information, to make the composite image more realistic.
 
-Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis of Shadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  provides annotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadows to construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in below image.
+Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis of Shadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  provides annotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadows to construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task and other shadow-related tasks as well. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in the figure below.
 
 <img src='Examples/task_intro.png' align="center" width=1024>
 
@@ -48,5 +47,16 @@ python Vis_Desoba_Dataset.py
 <img src='/data_processing/Visualization_Examples/5.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/6.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/12.png' align="center" width=1024>
-from left to right: synthetic composite image, shadow image, foreground object mask, foreground shadow mask, background object mask, and background shadow mask.
+from left to right: synthetic composite image without foreground shadow, target image with foreground shadow, foreground object mask, foreground shadow mask, background object mask, and background shadow mask.
  
+## Bibtex
+If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[pdf]()] [[supp]()] [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
+
+```
+@article{hong2021shadow,
+  title={Shadow Generation for Composite Image in Real-world Scenes},
+  author={Hong, Yan and Niu, Li and Zhang, Jianfu and Zhang, Liqing},
+  journal={arXiv preprint arXiv:2104.10338},
+  year={2021}
+}
+```
