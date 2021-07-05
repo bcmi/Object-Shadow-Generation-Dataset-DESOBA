@@ -50,7 +50,7 @@ python Vis_Desoba_Dataset.py
 from left to right: synthetic composite image without foreground shadow, target image with foreground shadow, foreground object mask, foreground shadow mask, background object mask, and background shadow mask.
  
 ## Bibtex
-If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[pdf]()] [[supp]()] [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
+If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
 
 ```
 @article{hong2021shadow,
