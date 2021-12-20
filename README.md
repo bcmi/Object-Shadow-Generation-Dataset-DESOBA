@@ -24,7 +24,7 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
 
 ### 1. Pix2Pix
 
---Image to image translation method. Implementation of paper "*Image-to-Image Translation with Conditional Adversarial Nets*" [[pdf]](https://arxiv.org/pdf/1611.07004.pdf).
+- Image to image translation method. Implementation of paper "*Image-to-Image Translation with Conditional Adversarial Nets*" [[pdf]](https://arxiv.org/pdf/1611.07004.pdf).
 
 ### 2. Pix2Pix-Res
 
