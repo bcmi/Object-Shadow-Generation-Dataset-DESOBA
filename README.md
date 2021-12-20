@@ -15,6 +15,9 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
 
  Our DESOBA dataset contains 840 training images with totally 11,509 object-shadow pairs and 160 test images with totally 615 object-shadow pairs. The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
  
+ <img src='Examples/dataset-samples.png' align="center" width=1024>
+
+ 
 || Num of Images|Num of Pairs|
 |:--:|:--:|:--:|
 |Training set|840|11,509|
