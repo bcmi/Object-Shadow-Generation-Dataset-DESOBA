@@ -17,12 +17,12 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
- <center>
+
 || Num of Images|Num of Pairs|
 |:--:|:--:|:--:|
 |Training set|840|11,509|
 |Test set| 160 |615|
-</center>
+
 
 ## Shadow Generation Baselines
 
