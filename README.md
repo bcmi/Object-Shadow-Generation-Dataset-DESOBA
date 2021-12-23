@@ -102,8 +102,8 @@ If you find this work is useful for your research, please cite our paper using t
 ```
 @article{hong2021shadow,
   title={Shadow Generation for Composite Image in Real-world Scenes},
-  author={Hong, Yan and Niu, Li and Zhang, Jianfu and Zhang, Liqing},
-  journal={arXiv preprint arXiv:2104.10338},
-  year={2021}
+  author={Hong, Yan and Niu, Li and Zhang, Jianfu},
+  journal={AAAI},
+  year={2022}
 }
 ```
