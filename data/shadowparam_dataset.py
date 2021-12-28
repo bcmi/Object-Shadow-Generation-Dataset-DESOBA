@@ -62,28 +62,21 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
                             birdy_deshadoweds, birdy_shadoweds,  birdy_fg_instances, birdy_fg_shadows, \
                             birdy_bg_instances,  birdy_bg_shadows, birdy_edges, birdy_shadowparas, birdy_shadow_object_ratio, birdy_instance_boxes, birdy_shadow_boxes, birdy_instance_box_areas, birdy_shadow_box_areas,birdy_im_lists):
 
-    ####curret_image_object_selection_choice
-    instance_pixels = np.unique(np.sort(instance_mask[instance_mask>0]))
-    shadow_pixels = np.unique(np.sort(shadow_mask[shadow_mask>0]))
+    ####producing training/test pairs according pixel value
+    instance_pixels_a = np.unique(np.sort(instance_mask[instance_mask>0]))
+    shadow_pixels_a = np.unique(np.sort(shadow_mask[shadow_mask>0]))
+    instance_pixels = np.intersect1d(instance_pixels_a,shadow_pixels_a)
 
-    # instance_pixels = np.intersect1d(instance_pixels,shadow_pixels)
-    # print(imname_list)
-    # if imname_list == ['web-shadow0148.png']:
-    #     print('pixels',instance_pixels)
-    #     print('shadow pixel',shadow_pixels)
     object_num = len(instance_pixels)
     if object_num==1:
         object_num=2
 
 
-    #####selecting random number of objects as foreground objects, while only one object is selected as foreground object
     if not is_train:
         object_num += 1
 
     for i in range(1, object_num):
-        ###selection for visualization
         selected_instance_pixel_combine = itertools.combinations(instance_pixels, i)
-        # combines = [combine for combine in selected_instance_pixel_combine]
         if not is_train:
             #####combination
             ###selecting one foreground image
@@ -98,62 +91,31 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
             #     continue
 
         else:
-            # # using 1 or 2 objects as foreground objects
+            ## using 1 or 2 objects as foreground objects
             if i > 2:
                 continue
-            ###using 1 or 2
-            # if i == 1 or i > 3:
-            #     continue
-            # if i != 1:
-            #     continue
-
-            # using all combines
-            # if i==1:
-            #     combines = combines
-            # else:
-            #     combines = combines[:2]
-            # if i!=1:
-            #     continue
             
-
-
-
-
-        ######dealing with fg and bg
-        # for combine in combines:
-        # j = -1
         for combine in selected_instance_pixel_combine:
-            # j+=1
-            # if i>1:
-            #     if j>5:
-            #         break
-
             fg_instance = instance_mask.copy()
             fg_shadow = shadow_mask.copy()
             bg_instance = instance_mask.copy()
             bg_shadow = shadow_mask.copy()
             
-            ###removing shadow without object
+            ###removing shadow without object for foreground object
             fg_shadow[fg_shadow==255] = 0
             fg_instance_boxes = []
             fg_shadow_boxes = []
             remaining_fg_pixel = list(set(instance_pixels).difference(set(combine)))
+            # producing foreground object mask
             for pixel in combine:
-                # if imname_list == ['web-shadow0148.png']:
-                #     print(pixel)
                 area = ( fg_shadow== pixel).sum()
                 total_area = (fg_shadow > -1).sum()
-                ##only one pixels in image after resize
-                # if area/total_area < 0.005:
-                #     continue
                 fg_shadow_boxes.append(mask_to_bbox(fg_shadow, pixel, newwh, newwh))
                 fg_shadow[fg_shadow==pixel] = 255
                 fg_instance_boxes.append(mask_to_bbox(fg_instance,pixel,newwh, newwh))
                 fg_instance[fg_instance==pixel] = 255
             fg_shadow[fg_shadow!=255] = 0
             fg_instance[fg_instance!=255] = 0
-            # if imname_list == ['web-shadow0148.png']:
-            #     print('before_1',np.max(fg_shadow))
 
             for pixel in remaining_fg_pixel:
                 bg_instance[bg_instance==pixel]=255
@@ -167,7 +129,7 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
             fg_shadow_edge = Image.fromarray(np.uint8(fg_shadow_edge), mode='L')
 
 
-            #####erode foreground mask birdy['B']
+            #####erode foreground mask to produce synthetic image with smooth edge
             if len(instance_pixels) == 1:
                 fg_shadow_new = cv2.dilate(fg_shadow, np.ones((20, 20), np.uint8), iterations=1)
             elif len(instance_pixels) < 3:
@@ -179,38 +141,25 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
 
 
             shadow_object_ratio = np.sum(fg_shadow/255) / np.sum(fg_instance/255)
-
             whole_area = np.ones(np.shape(fg_shadow))
             shadow_ratio = np.sum(fg_shadow/255) / np.sum(whole_area)
-            ###split area
+            ###split area according shadow ratio
             # if shadow_ratio > 0.02:
             #     continue
             # if shadow_ratio <= 0.02 or shadow_ratio>0.04:
             #     continue
             # if shadow_ratio <= 0.04 or shadow_ratio>0.08:
             #     continue
-            # ssssontinue
 
-
-            # print('ratio', shadow_object_ratio)
-            # 9.25 0.0 [BOS]
-            # 3.230642504118616 0.051772855710509526 [BOS-free]
-            # if shadow_object_ratio > 1 or shadow_object_ratio <= 0.8:
-            #     continue
-
-            # if imname_list == ['web-shadow0148.png']:
-            #     print('before',np.max(fg_shadow))
             fg_instance = Image.fromarray(np.uint8(fg_instance), mode='L')
             fg_shadow = Image.fromarray(np.uint8(fg_shadow), mode='L')
-            # if imname_list == ['web-shadow0148.png']:
-            #     print(np.max(fg_shadow))
             birdy_fg_instances.append(fg_instance)
             birdy_fg_shadows.append(fg_shadow)
             birdy_instance_boxes.append(torch.IntTensor(np.array(fg_instance_boxes)))
             birdy_shadow_boxes.append(torch.IntTensor(np.array(fg_shadow_boxes)))
             birdy_im_lists.append(imname_list)
 
-            ####obtaining bbox area
+            ####obtaining bbox area of foreground object
             fg_instance_box_areas = np.zeros(np.shape(fg_shadow))
             fg_shadow_box_areas = np.zeros(np.shape(fg_shadow))
             for i in range(len(fg_instance_boxes)):
@@ -248,19 +197,13 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
 
 
 
-
-
-
-
-
-
 class ShadowParamDataset(BaseDataset):
     def initialize(self, opt):
         self.opt = opt
         self.is_train = self.opt.isTrain
         self.root = opt.dataroot
-        self.dir_A =  opt.shadowimg_path #os.path.join(opt.dataroot, 'A')
-        self.dir_C = opt.shadowfree_path #os.path.join(opt.dataroot, opt.phase + 'C')
+        self.dir_A =  opt.shadowimg_path 
+        self.dir_C = opt.shadowfree_path 
         self.dir_param = opt.param_path
         self.dir_bg_instance = opt.bg_instance_path
         self.dir_bg_shadow = opt.bg_shadow_path
@@ -270,87 +213,30 @@ class ShadowParamDataset(BaseDataset):
         self.imname = []
         if self.is_train:
             for f in open(opt.dataroot + 'Training_labels.txt'):
-                # if len(self.imname_total) > 100:
-                #     break
-                self.imname_total.append(f.split())
+                self.imname.append(f.split())
         else:
             for f in open(opt.dataroot + 'Testing_labels.txt'):
                 self.imname_total.append(f.split())
 
+            for im in self.imname_total:
+                instance = Image.open(os.path.join(self.dir_bg_instance,im[0])).convert('L')
+                instance = np.array(instance)
+                instance_pixels = np.unique(np.sort(instance[instance>0]))
+                shadow = Image.open(os.path.join(self.dir_bg_shadow,im[0])).convert('L')
+                shadow = np.array(shadow)
+                shadow_pixels = np.unique(np.sort(shadow[shadow>0]))
+                if self.is_train:
+                    self.imname = self.imname_total
+                else:
+                    # select bosfree image or bos image
+                    if self.opt.bos:
+                        if (len(instance_pixels) > 1):
+                            self.imname.append(im)
+                    elif self.opt.bosfree:
+                        if (len(instance_pixels) == 1):
+                            self.imname.append(im)
 
-
-
-        for im in self.imname_total:
-            instance = Image.open(os.path.join(self.dir_bg_instance,im[0])).convert('L')
-            instance = np.array(instance)
-            instance_pixels = np.unique(np.sort(instance[instance>0]))
-            shadow = Image.open(os.path.join(self.dir_bg_shadow,im[0])).convert('L')
-            shadow = np.array(shadow)
-            shadow_pixels = np.unique(np.sort(shadow[shadow>0]))
-            if self.is_train:
-                self.imname = self.imname_total
-                # if (len(instance_pixels) > 1):
-                #     self.imname.append(im)
-                #     continue
-            else:
-                ########selecting testing conditional images for one foreground object
-                ####total(160)
-                # more than one bg pair(126)
-                if (len(instance_pixels) > 1):
-                    self.imname.append(im)
-                    continue
-
-                # # only shadow(10) + no bg information (24)
-                # if (len(instance_pixels) == 1):
-                #     self.imname.append(im)
-                #     continue
-
-                ##only shadow(10)
-                # if (len(instance_pixels) == 1 and len(shadow_pixels)>1):
-                #     self.imname.append(im)
-                #     continue
-
-                # ##no bg information (24)
-                # if (len(shadow_pixels) == 1 and len(instance_pixels) == 1):
-                #     self.imname.append(im)
-                #     continue
-                ########selecting testing conditional images
-
-                ########selecting testing conditional images for two foreground object
-                ####total(160)
-                # all
-                # if (len(instance_pixels) > 0):
-                #     self.imname.append(im)
-                #     continue
-
-                # # more than one bg pair(93)
-                # if (len(instance_pixels) > 2):
-                #     self.imname.append(im)
-                #     continue
-
-                # # only shadow() + no bg information ()
-                # if (len(instance_pixels) == 2):
-                #     self.imname.append(im)
-                #     continue
-
-                ##only shadow()
-                # if (len(instance_pixels) == 2 and len(shadow_pixels)>2):
-                #     self.imname.append(im)
-                #     continue
-
-                # ##no bg information ()
-                # if (len(shadow_pixels) == 2 and len(instance_pixels) == 2):
-                #     self.imname.append(im)
-                #     continue
-                ########selecting testing conditional images
-
-        ###dividing with the ratio of shadow size to instance size
-
-        print('total images number', len(self.imname))
-
-
-
-
+        # print('total images number', len(self.imname))
         self.birdy_deshadoweds = []
         self.birdy_shadoweds = []
         self.birdy_fg_instances = []
@@ -377,13 +263,7 @@ class ShadowParamDataset(BaseDataset):
             line = sparam.read()
             shadow_param = np.asarray([float(i) for i in line.split(" ") if i.strip()])
             shadow_param = shadow_param[0:6]
-            # if imname_list == ['web-shadow0148.png']:
-            #     print('start',np.unique(shadow),np.unique(instance))
-
-
-            #####resize
-
-
+            
             A_img_array = np.array(A_img)
             C_img_arry = np.array(C_img)
             new_mask_array = np.array(new_mask)
@@ -403,16 +283,7 @@ class ShadowParamDataset(BaseDataset):
                 self.birdy_bg_instances,  self.birdy_bg_shadows, self.birdy_edges, self.birdy_shadow_params, self.birdy_shadow_object_ratio, \
                 self.birdy_instance_boxes, self.birdy_shadow_boxes, self.birdy_instance_box_areas, self.birdy_shadow_box_areas,self.birdy_imlists)
 
-            ######dividing with the ratio of shadow size to object size
-
-
-        # 9.25 0.0 [BOS]
-        # 3.230642504118616 0.051772855710509526 [BOS-free]
-        # print('bos ratio', np.max(np.array(self.birdy_shadow_object_ratio)), np.min(np.array(self.birdy_shadow_object_ratio)))
-        # print('bos-free ratio', np.max(np.array(self.birdy_shadow_object_ratio)), np.min(np.array(self.birdy_shadow_object_ratio)))
-
-
-
+           
         self.data_size = len(self.birdy_deshadoweds)
         # print('fff', self.is_train)
         print('datasize', self.data_size)
