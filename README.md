@@ -5,6 +5,12 @@
 
 Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis of Shadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  provides annotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadows to construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task and other shadow-related tasks as well. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in the figure below.
 
+|DESOBA Split|Num of Images|Num of Pairs| 
+|:--:|:--:|:--:|
+|Train Set| 839| 11509 |
+|Test set| 160 |160|915|
+
+
 <img src='Examples/task_intro.png' align="center" width=1024>
 
 Illustration of DESOBA dataset construction: The green arrows illustrate the process of acquiring paired data for training and evaluation.  Given a ground-truth target image I<sub>g</sub>, we manually remove all shadows to produce a deshadowed image I<sub>d</sub>. Then, we randomly select a foreground object in I<sub>g</sub>, and replace its shadow area with the counterpart in I<sub>d</sub> to synthesize a composite image I<sub>c</sub> without foreground shadow. I<sub>c</sub> and I<sub>g</sub> form a pair of input composite image and ground-truth target image. 
@@ -73,7 +79,7 @@ Here we provide PyTorch implementation and the trained model of our SGRNet.
 
 ## Getting Started
 
-### Installation
+## Installation
 
 - Clone this repo:
 
@@ -87,11 +93,11 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 
 - Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**]) (access code: ), or [**Google Drive**]().
 
-# Data preparing
+## Data preparation
 
 DESOBA dataset include six subfolders including: ShadowImage, DeshadowedImage, InstanceMask, ShadowMask, newshadowmask, shadowparams
 
-# Shadow Generation Baselines
+## Shadow Generation Baselines
 
 ### 1. Pix2Pix
 
@@ -117,7 +123,6 @@ DESOBA dataset include six subfolders including: ShadowImage, DeshadowedImage, I
 - Image to image translation method. Implementation of paper "*ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes*" [[pdf]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf).
 
 
-# quick start
 
 ## Test on your own data
 
@@ -191,6 +196,101 @@ Similarlly, you can run,\
 `MaskshadowGAN_train.sh`\
 `ShadowGAN_train.sh` \
 to conduct experiment on DESOBA dataset for different baseline methods.
+
+
+## Experimental results on DESOBA dataset
+<table class="tg">
+  <tr>
+    <th class="tg-0pky" align="center">Method</th>
+    <th class="tg-0pky" colspan="3" align="center">BOS Test Images</th>
+    <th class="tg-0pky" colspan="2" align="center">BOS-free Test Images</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky" align="center">Evaluation metric</th>
+    <th class="tg-0pky" align="center">GMSE</th>
+    <th class="tg-0pky" align="center">LMSE</th>
+    <th class="tg-0pky" align="center">GSSIM</th>    
+    <th class="tg-0pky" align="center">LSSIM</th>
+    <th class="tg-0pky" align="center">GMSE</th>
+    <th class="tg-0pky" align="center">LMSE</th>
+    <th class="tg-0pky" align="center">GSSIM</th>    
+    <th class="tg-0pky" align="center">LSSIM</th>
+  </tr>
+  <tr>
+    <th class="tg-0pky" align="center">Pix2Pix</th>
+    <th class="tg-0pky" align="center">7.659</th>
+    <th class="tg-0pky" align="center">75.346</th>
+    <th class="tg-0pky" align="center">0.927</th>    
+    <th class="tg-0pky" align="center">0.588</th>
+    <th class="tg-0pky" align="center">18.875</th>
+    <th class="tg-0pky" align="center">81.444</th>
+    <th class="tg-0pky" align="center">0.856</th>    
+    <th class="tg-0pky" align="center">0.483</th>
+  </tr>
+  
+  <tr>
+    <th class="tg-0pky" align="center">Pix2Pix-Res</th>
+    <th class="tg-0pky" align="center">5.961</th>
+    <th class="tg-0pky" align="center">76.046</th>
+    <th class="tg-0pky" align="center">0.971</th>    
+    <th class="tg-0pky" align="center">0.612</th>
+    <th class="tg-0pky" align="center">18.305</th>
+    <th class="tg-0pky" align="center">81.966</th>
+    <th class="tg-0pky" align="center">0.901</th>    
+    <th class="tg-0pky" align="center">0.504</th>
+  </tr>
+  
+  <tr>
+    <th class="tg-0pky" align="center">ShadowGAN</th>
+    <th class="tg-0pky" align="center">5.985</th>
+    <th class="tg-0pky" align="center">78.413</th>
+    <th class="tg-0pky" align="center">0.986</th>    
+    <th class="tg-0pky" align="center">0.613</th>
+    <th class="tg-0pky" align="center">19.306</th>
+    <th class="tg-0pky" align="center">87.017</th>
+    <th class="tg-0pky" align="center">0.918</th>    
+    <th class="tg-0pky" align="center">0.498</th>
+  </tr>
+  
+  <tr>
+    <th class="tg-0pky" align="center">Mask-ShadowGAN</th>
+    <th class="tg-0pky" align="center">8.287</th>
+    <th class="tg-0pky" align="center">79.212</th>
+    <th class="tg-0pky" align="center">0.953</th>    
+    <th class="tg-0pky" align="center">0.599</th>
+    <th class="tg-0pky" align="center">19.475</th>
+    <th class="tg-0pky" align="center">83.457</th>
+    <th class="tg-0pky" align="center">0.891</th>    
+    <th class="tg-0pky" align="center">0.500</th>
+  </tr>
+ 
+ <tr>
+    <th class="tg-0pky" align="center">ARShandowGAN</th>
+    <th class="tg-0pky" align="center">6.481</th>
+    <th class="tg-0pky" align="center">75.099</th>
+    <th class="tg-0pky" align="center">0.983</th>    
+    <th class="tg-0pky" align="center">0.617</th>
+    <th class="tg-0pky" align="center">18.723</th>
+    <th class="tg-0pky" align="center">81.272</th>
+    <th class="tg-0pky" align="center">0.917</th>    
+    <th class="tg-0pky" align="center">0.513</th>
+  </tr>
+  
+  <tr>
+    <th class="tg-0pky" align="center">SGRNet</th>
+    <th class="tg-0pky" align="center">4.754</th>
+    <th class="tg-0pky" align="center">61.762</th>
+    <th class="tg-0pky" align="center">0.988</th>    
+    <th class="tg-0pky" align="center">0.684</th>
+    <th class="tg-0pky" align="center">15.128</th>
+    <th class="tg-0pky" align="center">61.439</th>
+    <th class="tg-0pky" align="center">0.927</th>    
+    <th class="tg-0pky" align="center">0.555</th>
+  </tr>
+  
+  
+  
+  
 
 
 
