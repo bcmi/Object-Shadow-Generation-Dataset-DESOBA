@@ -11,12 +11,55 @@ Illustration of DESOBA dataset construction: The green arrows illustrate the pro
 The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and its foreground mask M<sub>fo</sub>, we aim to generate the target image I<sub>g</sub> with foreground shadow.
 
 
-
-
  Our DESOBA dataset contains 840 training images with totally 2,999 object-shadow pairs and 160 test images with totally 624 object-shadow pairs. The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
+
+## Visualizing training/testing pairs of DESOBA dataset
+
+cd ./DESOBA_DATASET_util
+
+- visulizing train pairs (839 train images with 11509 pairs)
+- 
+`python Vis_Desoba_Dataset --serial_batches --isTrain 1` 
+
+train pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/
+
+- visulizing test bosfree pairs (34 test bosfree images with 34 pairs)
+- 
+`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree` 
+
+test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
+
+- visulizing test bos pairs (126 test bos images with 581 pairs)
+- 
+`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bos` 
+
+test bos pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bos
+
+
+
+
+## Producing real composite images from test images of DESOBA
+
+cd ./DESOBA_DATASET_util
+
+- producing real composite images with one foreground object
+- 
+`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 1` 
+
+real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/1_ForegroundObject/
+
+ producing real composite images with two foreground objects
+ 
+`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2` 
+
+real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/2_ForegroundObject
+
+
+## Dataloader preparation for your own project
+We provide the code of obtaining training/testing tuples, each tuple contains foreground object mask, foreground shadow mask, background object mask, background shadow mask, shadow image, and synthetic composite image without foreground shadow mask. The dataloader is available in `/DESOBA_DATASET_util/data/DesobaSyntheticImageGeneration_dataset.py`, which can be used as dataloader in training phase or testing phase.
 
 
 # Our SGRNet
@@ -42,7 +85,7 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 
 - Download the DESOBA dataset.
 
-- We provide the code of obtaining training/testing tuples, each tuple contains foreground object mask, foreground shadow mask, background object mask, background shadow mask, shadow image, and synthetic composite image without foreground shadow mask. The dataloader is available in `/data_processing/data/DesobaSyntheticImageGeneration_dataset.py`, which can be used as dataloader in training phase or testing phase.
+- 
 
 - We also provide the code of visualization of training/testing tuple, run:
 ```bash
@@ -86,40 +129,6 @@ from left to right: synthetic composite image without foreground shadow, target 
 ### 5. ARShadowGAN
 
 - Image to image translation method. Implementation of paper "*ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes*" [[pdf]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf).
-
-# Visualization of DESOBA dataset and producing real composite images based on DESOBA dataset 
-
-## Visualizing training/testing pairs of DESOBA
-
-cd ./DESOBA_DATASET_util
-
-- visulizing train pairs (839 train images with 11509 pairs)
-`python Vis_Desoba_Dataset --serial_batches --isTrain 1` 
-train pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/
-
-- visulizing test bosfree pairs (34 test bosfree images with 34 pairs)
-`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree` 
-test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
-
-- visulizing test bos pairs (126 test bos images with 581 pairs)
-`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bos` 
-test bos pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bos
-
-you can use /DESOBA_DATASET_util/data/DesobaSyntheticImageGeneration_dataset.py as dataloader for your own project.
-
-
-## Producing real composite images from test images of DESOBA
-
-cd ./DESOBA_DATASET_util
-
-- producing real composite images with one foreground object
-`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 1` 
-real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/1_ForegroundObject/
-
-
-- producing real composite images with two foreground objects
-`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2` 
-real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/2_ForegroundObject
 
 
 # quick start
