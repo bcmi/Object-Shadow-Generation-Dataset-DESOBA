@@ -233,7 +233,7 @@ to conduct evaluation on BOS test images from DESOBA dataset for different basel
 to conduct evaluation on BOS-free test images from DESOBA dataset for different baseline methods, respectively.
 
 ## Train on DESOBA dataset:
-Considering that our SGRNet relied on shadow parameters during training phase, we need to calculate shadow parameters from paired shadow-deshadow images and we provide calculated shadow parameters in DESOBA dataset, you can also calculate shadow parameters based on tuple {shadowimage, deshadowed image, shadow mask} by runing `/data_processing/shadow_param_spba.py`
+Considering that our SGRNet relied on shadow parameters during training phase, we need to calculate shadow parameters from paired shadow-deshadow images and we provide calculated shadow parameters in DESOBA dataset, you can also calculate shadow parameters based on tuple {shadowimage, deshadowed image, shadow mask} by runing `/data_processing/compute_params_DESOBA.py`
 
 - For SGRNet method: you can run,
 ```bash
