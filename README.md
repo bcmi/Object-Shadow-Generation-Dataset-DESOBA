@@ -87,6 +87,95 @@ from left to right: synthetic composite image without foreground shadow, target 
 
 - Image to image translation method. Implementation of paper "*ARShadowGAN: Shadow Generative Adversarial Network for Augmented Reality in Single Light Scenes*" [[pdf]](https://openaccess.thecvf.com/content_CVPR_2020/papers/Liu_ARShadowGAN_Shadow_Generative_Adversarial_Network_for_Augmented_Reality_in_Single_CVPR_2020_paper.pdf).
 
+# Visualization of DESOBA dataset and producing real composite images based on DESOBA dataset 
+
+## Visualizing training/testing pairs of DESOBA
+
+cd ./DESOBA_DATASET_util
+
+- visulizing train pairs (839 train images with 11509 pairs)
+`python Vis_Desoba_Dataset --serial_batches --isTrain 1` 
+train pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/
+
+- visulizing test bosfree pairs (34 test bosfree images with 34 pairs)
+`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree` 
+test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
+
+- visulizing test bos pairs (126 test bos images with 581 pairs)
+`python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bos` 
+test bos pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bos
+
+you can use /DESOBA_DATASET_util/data/DesobaSyntheticImageGeneration_dataset.py as dataloader for your own project.
+
+
+## Producing real composite images from test images of DESOBA
+
+cd ./DESOBA_DATASET_util
+
+- producing real composite images with one foreground object
+`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 1` 
+real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/1_ForegroundObject/
+
+
+- producing real composite images with two foreground objects
+`python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2` 
+real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/2_ForegroundObject
+
+
+# quick start
+
+## Test on your own data
+
+you should provide foreground object mask and background image without foreground shadow.
+
+- For our SGRNet method:
+-- with background object mask and background shadow mask, you can modify (reseting the paths of your data) and run,
+`/src/script/SGRNet_RealComposite.sh` 
+
+-- without background object mask and background shadow mask, you can modify (reseting the paths of your data) and run,
+`/script/SGRNet_RealComposite_2.sh` 
+
+- For baselines methods:
+you can run,
+`Pix2pix_RealComposite.sh`, `Pix2pixRes_RealComposite.sh`,`ARShadowGAN_RealComposite.sh`,`MaskshadowGAN_RealComposite.sh`,`ShadowGAN_RealComposite.sh` to produce shadow for real composite images using pretrained baseline models.
+
+
+
+
+## Test on real composite images
+we provide 100 real composite images without foreground mask, you can download from [] to /DESOBA_DATASET/, and run
+
+`/src/script/SGRNet_RealComposite.sh` 
+
+Similarlly, you can run `Pix2pix_RealComposite.sh`, `Pix2pixRes_RealComposite.sh`,`ARShadowGAN_RealComposite.sh`,`MaskshadowGAN_RealComposite.sh`,`ShadowGAN_RealComposite.sh` to produce shadow for real composite images using pretrained baseline models.
+
+
+
+
+## Test on DESOBA dataset:
+- test on bos test images, setting TESTDATA='--bos' in /script/SGRNet_test.sh and run
+
+`/script/SGRNet_test.sh` by 
+
+- test on bosfree test images, setting TESTDATA='--bosfree' in /script/SGRNet_test.sh and run
+
+`/script/SGRNet_test.sh` 
+
+Similarlly, you can run `Pix2pix_test.sh`, `Pix2pixRes_test.sh`,`ARShadowGAN_test.sh`,`MaskshadowGAN_test.sh`,`ShadowGAN_test.sh` to conduct evaluation on desoba dataset for different baselines
+
+
+
+
+## Train on DESOBA dataset:
+Considering that our SGRNet relied on shadow parameters during training phase, we need to calculate shadow parameters from paired shadow-deshadow images and we provide calculated shadow parameters in, you can also calculate shadow parameters based on tuple {shadowimage, deshadowed image, shadow mask} by refer
+
+you can run,
+
+`/script/SGRNet_train.sh`
+
+Similarlly, you can run `Pix2pix_train.sh`, `Pix2pixRes_train.sh`,`ARShadowGAN_train.sh`,`MaskshadowGAN_train.sh`,`ShadowGAN_train.sh` to conduct experiment on desoabe dataset for different baselines
+
+
 
 ## Bibtex
 If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
