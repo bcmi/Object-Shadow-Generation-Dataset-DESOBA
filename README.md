@@ -34,13 +34,13 @@ python Vis_Desoba_Dataset --serial_batches --isTrain 1
 ```
 train pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/
 
-- visulizing test bosfree pairs (34 test bosfree images with 34 pairs):
+- visualizing test bosfree pairs (34 test bosfree images with 34 pairs):
 ```bash
 python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree
 ```
 test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
 
-- visulizing test bos pairs (126 test bos images with 581 pairs):
+- visualizing test bos pairs (126 test bos images with 581 pairs):
 ```bash
 python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bos
 ```
@@ -76,7 +76,10 @@ We show some examples of real composite images in below:
 <img src='/data_processing/Visualization_Examples/r2.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/r3.png' align="center" width=1024>
 <img src='/data_processing/Visualization_Examples/r4.png' align="center" width=1024>
-from left to right: synthetic composite image without foreground shadow,  foreground object mask
+from left to right: synthetic composite image without foreground shadow,  foreground object mask.
+
+To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. The 100 real composite images could be found in  [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug).
+
 
 ## Dataloader preparation for your own project
 We provide the code of obtaining training/testing tuples, each tuple contains foreground object mask, foreground shadow mask, background object mask, background shadow mask, shadow image, and synthetic composite image without foreground shadow mask. The dataloader is available in `/DESOBA_DATASET_util/data/DesobaSyntheticImageGeneration_dataset.py`, which can be used as dataloader in training phase or testing phase.
@@ -107,7 +110,7 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 - Download the DESOBA dataset from  [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
 
 
-- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**]) (access code: ), or [**Google Drive**]().
+- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1QWXtM58bMx4N0yHT-BJrpA) (access code:1234), or [**Google Drive**](https://drive.google.com/drive/folders/16isd7fPUHW1uaW3oGniCYZqhVve5zCN1?usp=sharing).
 
 ## Data preparation
 
@@ -350,7 +353,7 @@ Here we also show some example results of different baselines on DESOBA dataset.
   
 
 ### Visualization results on real composite images with different methods
-Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in BaiduCloud. And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
+Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug).. And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
 
 
 ## Bibtex
