@@ -204,7 +204,7 @@ to produce shadow for prepared real composite images using pretrained baseline m
  ```
 to conduct evaluation on BOS test images from DESOBA dataset.
 
- - Test on BOS-free test images, setting `TESTDATA='--bosfree'` in `/src/script/SGRNet_test.sh` and run
+ - Test on BOS-free test images, setting `TESTDATA='--bosfree` in `/src/script/SGRNet_test.sh` and run
 ```bash
 /src/script/SGRNet_test.sh
 ```
@@ -214,11 +214,11 @@ to conduct evaluation on BOS-free test images from DESOBA dataset.
 
  - Test on BOS test images, setting `TESTDATA='--bos`, and you can run
 ```bash
-/src/script/Pix2pix_test.sh`
-`/src/script/Pix2pixRes_test.sh`
-`/src/script/ARShadowGAN_test.sh`
-`/src/script/MaskshadowGAN_test.sh`
-`/src/script/ShadowGAN_test.sh` 
+/src/script/Pix2pix_test.sh
+/src/script/Pix2pixRes_test.sh
+/src/script/ARShadowGAN_test.sh
+/src/script/MaskshadowGAN_test.sh
+/src/script/ShadowGAN_test.sh
 ```
 to conduct evaluation on BOS test images from DESOBA dataset for different baseline methods, respectively.
 
@@ -350,7 +350,7 @@ Here we also show some example results of different baselines on DESOBA dataset.
   
 
 ### Visualization results on real composite images with different methods
-Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug).. And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
+Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug). And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
 
 
 ## Bibtex
