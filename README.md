@@ -218,6 +218,8 @@ to train model on DESOBA dataset for different baseline methods, respectively.
 
 
 ## Experimental results on DESOBA dataset
+
+### 
 <table class="tg">
   <tr>
     <th class="tg-0pky" align="center">Method</th>
@@ -308,9 +310,12 @@ to train model on DESOBA dataset for different baseline methods, respectively.
   </tr>
   
   
-  
+### Visualization results on DESOBA dataset with different methods
+Here we also show some example results of different baselines on DESOBA dataset. More examples can be found in our main paper.
   
 
+### Visualization results on real composite images with different methods
+Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in BaiduCloud. And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
 
 
 ## Bibtex
