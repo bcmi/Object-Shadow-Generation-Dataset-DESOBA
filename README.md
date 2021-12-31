@@ -14,7 +14,7 @@ Illustration of DESOBA dataset construction: The green arrows illustrate the pro
 The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and its foreground mask M<sub>fo</sub>, we aim to generate the target image I<sub>g</sub> with foreground shadow.
 
 
- Our DESOBA dataset contains 839 training images with totally 2,999 object-shadow pairs and 160 test images with totally 615 object-shadow pairs. The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
+ Our DESOBA dataset contains 839 training images with totally 2,999 object-shadow pairs and 160 test images with totally 615 object-shadow pairs. The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing).
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
@@ -104,7 +104,7 @@ git clone https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBA.git
 cd Object-Shadow-Generation-Dataset-DESOBA
 ```
 
-- Download the DESOBA dataset from  [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing). Save it at `/DESOBA_DATASET/`.
+- Download the DESOBA dataset from  [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing). Save it at `/DESOBA_DATASET/`.
 
 
 - Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1QWXtM58bMx4N0yHT-BJrpA) (access code:1234), or [**Google Drive**](https://drive.google.com/drive/folders/16isd7fPUHW1uaW3oGniCYZqhVve5zCN1?usp=sharing). Save it at `/TrainedModels/`
@@ -212,7 +212,7 @@ to conduct evaluation on BOS-free test images from DESOBA dataset.
 
 - For baselines methods: 
 
- - Test on BOS test images, setting `TESTDATA='--bos`, and you can run
+ - Test on BOS test images, setting `TESTDATA=--bos`, and you can run
 ```bash
 /src/script/Pix2pix_test.sh
 /src/script/Pix2pixRes_test.sh
@@ -233,7 +233,7 @@ to conduct evaluation on BOS test images from DESOBA dataset for different basel
 to conduct evaluation on BOS-free test images from DESOBA dataset for different baseline methods, respectively.
 
 ## Train on DESOBA dataset:
-Considering that our SGRNet relied on shadow parameters during training phase, we need to calculate shadow parameters from paired shadow-deshadow images and we provide calculated shadow parameters in, you can also calculate shadow parameters based on tuple {shadowimage, deshadowed image, shadow mask} by refer
+Considering that our SGRNet relied on shadow parameters during training phase, we need to calculate shadow parameters from paired shadow-deshadow images and we provide calculated shadow parameters in DESOBA dataset, you can also calculate shadow parameters based on tuple {shadowimage, deshadowed image, shadow mask} by runing `/data_processing/shadow_param_spba.py`
 
 - For SGRNet method: you can run,
 ```bash
