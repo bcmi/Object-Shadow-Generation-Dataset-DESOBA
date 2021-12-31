@@ -30,13 +30,13 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
 
 - visualizing train pairs (839 train images with 11509 pairs):
 ```bash
-python Vis_Desoba_Dataset --serial_batches --isTrain 1`
+python Vis_Desoba_Dataset --serial_batches --isTrain 1
 ```
 train pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/
 
 - visulizing test bosfree pairs (34 test bosfree images with 34 pairs):
 ```bash
-python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree`
+python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree
 ```
 test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
 
@@ -91,7 +91,7 @@ Here we provide PyTorch implementation and the trained model of our SGRNet.
 - Python 
 - Pytorch
 - PIL
-- you can create a new environment by using  'pip install -r requirements.txt'
+- you can create a new environment by using  `pip install -r requirements.txt`
 
 ## Getting Started
 
@@ -178,7 +178,7 @@ we provide 100 real composite images without foreground mask, you can download f
 - For SGRNet method:
 you can run,
 ```bash
-/src/script/SGRNet_RealComposite.sh` 
+/src/script/SGRNet_RealComposite.sh
 ```
 to produce shadow for prepared real composite images using pretrained SGRNet model.
 
@@ -186,11 +186,11 @@ to produce shadow for prepared real composite images using pretrained SGRNet mod
 - For baselines methods:
 you can run,
 ```bash
-/src/script/Pix2pix_RealComposite.sh`
-`/src/script/Pix2pixRes_RealComposite.sh`
-`/src/script/ARShadowGAN_RealComposite.sh`
-`/src/script/MaskshadowGAN_RealComposite.sh`
-`/src/script/ShadowGAN_RealComposite.sh`
+/src/script/Pix2pix_RealComposite.sh
+/src/script/Pix2pixRes_RealComposite.sh
+/src/script/ARShadowGAN_RealComposite.sh
+/src/script/MaskshadowGAN_RealComposite.sh
+/src/script/ShadowGAN_RealComposite.sh
 ```
 to produce shadow for prepared real composite images using pretrained baseline models.
 
@@ -198,21 +198,21 @@ to produce shadow for prepared real composite images using pretrained baseline m
 ## Test on DESOBA dataset:
 - For SGRNet method:
 
- - Test on BOS test images, setting `TESTDATA='--bos'` in `/src/script/SGRNet_test.sh` and run
+ - Test on BOS test images, setting `TESTDATA='--bos` in `/src/script/SGRNet_test.sh` and run
  ```bash
- /script/SGRNet_test.sh` 
+ /script/SGRNet_test.sh
  ```
 to conduct evaluation on BOS test images from DESOBA dataset.
 
  - Test on BOS-free test images, setting `TESTDATA='--bosfree'` in `/src/script/SGRNet_test.sh` and run
 ```bash
-/script/SGRNet_test.sh` 
+/script/SGRNet_test.sh
 ```
 to conduct evaluation on BOS-free test images from DESOBA dataset.
 
 - For baselines methods: 
 
- - Test on BOS test images, setting `TESTDATA='--bos'`, and you can run
+ - Test on BOS test images, setting `TESTDATA='--bos`, and you can run
 ```bash
 /src/script/Pix2pix_test.sh`
 `/src/script/Pix2pixRes_test.sh`
@@ -222,13 +222,13 @@ to conduct evaluation on BOS-free test images from DESOBA dataset.
 ```
 to conduct evaluation on BOS test images from DESOBA dataset for different baseline methods, respectively.
 
- - Test on BOS-free test images, setting `TESTDATA='--bosfree'`, and you can run
+ - Test on BOS-free test images, setting `TESTDATA='--bosfree`, and you can run
  ```bash
- /src/script/Pix2pix_test.sh`
-`/src/script/Pix2pixRes_test.sh`
-`/src/script/ARShadowGAN_test.sh`
-`/src/script/MaskshadowGAN_test.sh`
-`/src/script/ShadowGAN_test.sh` 
+/src/script/Pix2pix_test.sh
+/src/script/Pix2pixRes_test.sh
+/src/script/ARShadowGAN_test.sh
+/src/script/MaskshadowGAN_test.sh
+/src/script/ShadowGAN_test.sh
 ```
 to conduct evaluation on BOS-free test images from DESOBA dataset for different baseline methods, respectively.
 
@@ -237,17 +237,17 @@ Considering that our SGRNet relied on shadow parameters during training phase, w
 
 - For SGRNet method: you can run,
 ```bash
-/src/script/SGRNet_train.sh`
+/src/script/SGRNet_train.sh
 ```
 to train SGRNet model on DESOBA dataset.
 
 - For baselines methods: you can run,
 ```bash
-Pix2pix_train.sh`
-`Pix2pixRes_train.sh`
-`ARShadowGAN_train.sh`
-`MaskshadowGAN_train.sh`
-`ShadowGAN_train.sh` 
+Pix2pix_train.sh
+Pix2pixRes_train.sh
+ARShadowGAN_train.sh
+MaskshadowGAN_train.sh
+ShadowGAN_train.sh` 
 ```
 to train model on DESOBA dataset for different baseline methods, respectively.
 
