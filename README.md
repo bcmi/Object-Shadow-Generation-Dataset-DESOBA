@@ -91,6 +91,7 @@ Here we provide PyTorch implementation and the trained model of our SGRNet.
 - Python 
 - Pytorch
 - PIL
+- you can create a new environment by using  'pip install -r requirements.txt'
 
 ## Getting Started
 
