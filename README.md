@@ -72,11 +72,8 @@ python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2
 real composite images with one foreground object are store in /DESOBA_DATASET/CompositeImages/2_ForegroundObject
 
 We show some examples of real composite images in below:
-<img src='/data_processing/Visualization_Examples/r1.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r2.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r3.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r4.png' align="center" width=1024>
-from left to right: synthetic composite image without foreground shadow,  foreground object mask.
+<img src='/data_processing/Visualization_Examples/real_composite_samples.png' align="center" width=1024>
+from left to right: synthetic composite image without foreground shadow,  foreground object mask, background object mask, background shadow mask.
 
 To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. The 100 real composite images could be found in  [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug).
 
