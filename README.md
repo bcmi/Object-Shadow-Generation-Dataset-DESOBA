@@ -93,7 +93,7 @@ cd Object-Shadow-Generation-Dataset-DESOBA
 - Download the DESOBA dataset from  [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
 
 
-- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**]) (access code: ), or [**Google Drive**]().
+- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1HhPI2krAyGONf5BD5m17og) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/16isd7fPUHW1uaW3oGniCYZqhVve5zCN1?usp=sharing).
 
 ## Data preparation
 
@@ -153,7 +153,7 @@ to produce foreground shadow for your own composite images using pretrained base
 
 
 ## Test on real composite images
-we provide 100 real composite images without foreground mask, you can download from [] to /DESOBA_DATASET/, 
+we provide 100 real composite images without foreground mask, you can download from  [**Baidu Cloud**](https://pan.baidu.com/s/1X6ezrhkAG0Bd_dOdyUYj_w) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1CspARS6nBVQhF0we-jro8N5PRnfTizxM?usp=sharing) to /DESOBA_DATASET/, 
 
 - For SGRNet method:
 you can run,\
