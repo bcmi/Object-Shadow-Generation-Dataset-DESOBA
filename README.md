@@ -154,7 +154,7 @@ to produce foreground shadow for your own composite images using pretrained SGRN
 
  - without background object mask and background shadow mask, you can modify (reseting the paths of your own data) and run,
 ```bash
-/src/script/SGRNet_RealComposite_2.sh`
+/src/script/SGRNet_RealComposite_2.sh
 ```
 to produce foreground shadow for your own composite images using pretrained SGRNet model.
 
@@ -200,13 +200,13 @@ to produce shadow for prepared real composite images using pretrained baseline m
 
  - Test on BOS test images, setting `TESTDATA='--bos` in `/src/script/SGRNet_test.sh` and run
  ```bash
- /script/SGRNet_test.sh
+ /src/script/SGRNet_test.sh
  ```
 to conduct evaluation on BOS test images from DESOBA dataset.
 
  - Test on BOS-free test images, setting `TESTDATA='--bosfree'` in `/src/script/SGRNet_test.sh` and run
 ```bash
-/script/SGRNet_test.sh
+/src/script/SGRNet_test.sh
 ```
 to conduct evaluation on BOS-free test images from DESOBA dataset.
 
@@ -243,11 +243,11 @@ to train SGRNet model on DESOBA dataset.
 
 - For baselines methods: you can run,
 ```bash
-Pix2pix_train.sh
-Pix2pixRes_train.sh
-ARShadowGAN_train.sh
-MaskshadowGAN_train.sh
-ShadowGAN_train.sh` 
+/src/script/Pix2pix_train.sh
+/src/script/Pix2pixRes_train.sh
+/src/script/ARShadowGAN_train.sh
+/src/script/MaskshadowGAN_train.sh
+/src/script/ShadowGAN_train.sh
 ```
 to train model on DESOBA dataset for different baseline methods, respectively.
 
