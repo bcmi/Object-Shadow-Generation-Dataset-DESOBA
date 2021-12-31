@@ -21,7 +21,7 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
 |DESOBA Split|Num of Images|Num of Pairs| 
 |:--:|:--:|:--:|
 |Train Set| 839| 11509 |
-|Test set| 160 |915|
+|Test set| 160 |615|
 
 
 ## Visualizing training/testing pairs of DESOBA dataset
