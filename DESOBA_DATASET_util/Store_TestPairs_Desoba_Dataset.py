@@ -6,7 +6,7 @@ import numpy as np
 
 def get_parser():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataroot',default='/media/user/data/ShadowGeneration/InstanceShadowDetection/SOBA/SOBAFinalSplit/',
+    parser.add_argument('--dataroot',default='../DESOBA_DATASET/',
                         help='path to images (should have subfolders trainA, trainB, valA, valB, etc)')
     parser.add_argument('--loadSize', type=int, default=256, help='scale images to this size')
     parser.add_argument('--dataset_mode', type=str, default='DesobaSyntheticImageGeneration', help='chooses how datasets are loaded. [unaligned | aligned | single]')
@@ -18,8 +18,8 @@ def get_parser():
     parser.add_argument('--bos', action='store_true')
 
     
+    parser.add_argument('--output_path', default='../DESOBA_DATASET/TestSplit/',type=str)
 
-    parser.add_argument('--output_path', default='/media/user/data/ShadowGeneration/HYShadowGeneration/SGRNet/DESOBA_DATASET/TestSplit/',type=str)
 
     return parser
 
@@ -29,14 +29,11 @@ if __name__ == "__main__":
     parser = get_parser()
     opt, _ = parser.parse_known_args()
     opt.isTrain = False
-    opt.shadowimg_path = opt.dataroot + 'shadowimg'
-    opt.shadowfree_path = opt.dataroot + 'shadowfree'
-    opt.instance_path = opt.dataroot + 'shadowcolorinstancemask'
-    opt.shadow_path = opt.dataroot + 'shadowcolormask'
-    opt.bg_instance_path = opt.dataroot + 'shadowcolorinstancemask'
-    opt.bg_shadow_path = opt.dataroot + 'shadowcolormask'
-    opt.new_mask_path = opt.dataroot + 'shadownewmask'
-    opt.param_path = opt.dataroot + 'SOBA_params'
+    opt.shadowimg_path = opt.dataroot + '/ShadowImage'
+    opt.shadowfree_path = opt.dataroot + '/DeshadowedImage'
+    opt.instance_path = opt.dataroot + '/InstanceMask'
+    opt.shadow_path = opt.dataroot + '/ShadowMask'
+    opt.new_mask_path = opt.dataroot + '/shadownewmask'
 
 
     if opt.bos:
