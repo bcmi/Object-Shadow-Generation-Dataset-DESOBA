@@ -196,7 +196,7 @@ class DesobaSyntheticImageGenerationdataset(BaseDataset):
             if self.bos:
                 print('producing {} bos test images with {} test bos pairs stored in {}'.format(self.image_size, self.data_size, self.store_path))
             if self.bosfree:
-                print('producing {} bosfree test images with {} test bosfree pairs stored in {}'.format(self.data_size, self.store_path))
+                print('producing {} bosfree test images with {} test bosfree pairs stored in {}'.format(self.image_size, self.data_size, self.store_path))
 
     def __getitem__(self,index):
         birdy = {}
