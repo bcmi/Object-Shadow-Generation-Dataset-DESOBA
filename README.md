@@ -349,11 +349,12 @@ to train model on DESOBA dataset for different baseline methods, respectively.
 Here we also show some example results of different baselines on DESOBA dataset. More examples can be found in our main paper.
 <img src='/Examples/compare_images.png' align="center" width=1024>
 From left to right are input composite image (a), foreground object mask (b), results of Pix2Pix
-(c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), our SGRNet (h), ground-truth (i). The results on BOS (\emph{resp.,}  BOS-free) test images are shown in row 1-2 (\emph{resp.,} 3-4).
+(c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), our SGRNet (h), ground-truth (i). The results on BOS test images are shown in row 1-2, and the results on  BOS-free  test images are shown in row 3-4).
 
 ### Visualization results on real composite images with different methods
 Besides, to evaluate the effectiveness of different methods in real scenarios, we also conduct user study on 100 real composite images, of which 74 images with one foreground object and 26 images with two foreground obejcts. Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug) (access code: 1234), or [**Google Drive**](https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug). And to visualize the comparison, we have put the results of different methods on all 100 real composite images in Supplementary.
-
+<img src='/Examples/composite_images_supp.png' align="center" width=1024>
+From left to right are  input composite image (a), foreground object mask (b), results of Pix2Pix (c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), SGRNet (h).
 
 ## Bibtex
 If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
