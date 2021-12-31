@@ -5,10 +5,7 @@
 
 Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We build our dataset on the basis of Shadow-OBject Association dataset [SOBA](https://github.com/stevewongv/InstanceShadowDetection),  which  collects  real-world  images  in  complex  scenes  and  provides annotated masks for object-shadow pairs.  Based on SOBA dataset, we remove all the shadows to construct our DEshadowed Shadow-OBject Association(DESOBA) dataset, which can be used for shadow generation task and other shadow-related tasks as well. We illustrate the process of our DESOBA dataset construction based on SOBA dataset in the figure below.
 
-|DESOBA Split|Num of Images|Num of Pairs| 
-|:--:|:--:|:--:|
-|Train Set| 839| 11509 |
-|Test set| 160 |160|915|
+
 
 
 <img src='Examples/task_intro.png' align="center" width=1024>
@@ -20,6 +17,11 @@ The red arrow illustrates our shadow generation task. Given I<sub>c</sub> and it
  Our DESOBA dataset contains 840 training images with totally 2,999 object-shadow pairs and 160 test images with totally 624 object-shadow pairs. The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/file/d/114BU47G0OJV3vmx5WKxGnWDSj2Bzh6qS/view?usp=sharing).
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
+
+|DESOBA Split|Num of Images|Num of Pairs| 
+|:--:|:--:|:--:|
+|Train Set| 839| 11509 |
+|Test set| 160 |160|915|
 
 
 ## Visualizing training/testing pairs of DESOBA dataset
