@@ -13,7 +13,7 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We
 
 # Our DESOBA Dataset
 
-**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing).
+**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing).
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
@@ -115,7 +115,7 @@ git clone https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBA.git
 cd Object-Shadow-Generation-Dataset-DESOBA
 ```
 
-- Download the DESOBA dataset from  [**Baidu Cloud**](https://pan.baidu.com/s/1fYqcSjGSr52jppg2LEA1qQ) (access code: sipx), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing). Save it at `/DESOBA_DATASET/`.
+- Download the DESOBA dataset from [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing). Save it at `/DESOBA_DATASET/`.
 
 
 - Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1QWXtM58bMx4N0yHT-BJrpA) (access code:1234), or [**Google Drive**](https://drive.google.com/drive/folders/16isd7fPUHW1uaW3oGniCYZqhVve5zCN1?usp=sharing). Save it at `/TrainedModels/`.
@@ -205,7 +205,7 @@ to conduct evaluation on BOS-free test images from DESOBA dataset.
 ```
 to conduct evaluation on BOS test images from DESOBA dataset for different baseline methods, respectively.
 
- - For BOS-free test images, set `TESTDATA='--bosfree` and run
+ - For BOS-free test images, set `TESTDATA=--bosfree` and run
  ```bash
 /src/script/Pix2pix_test.sh
 /src/script/Pix2pixRes_test.sh
