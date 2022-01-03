@@ -4,13 +4,13 @@
 
 - visualizing train pairs (839 train images with 11509 pairs):
 ```bash
-python Vis_Desoba_Dataset --serial_batches --isTrain 1`
+python Vis_Desoba_Dataset --serial_batches --isTrain 1
 ```
 train pairs are stored in /DESOBA_DATASET/TrainTestVisualization/train/
 
 - visulizing test bosfree pairs (34 test bosfree images with 34 pairs):
 ```bash
-python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree`
+python Vis_Desoba_Dataset --serial_batches --isTrain 0 --bosfree
 ```
 test bosfree pairs are store in /DESOBA_DATASET/TrainTestVisualization/train/test_bosfree
 
@@ -43,7 +43,7 @@ real composite images with one foreground object are store in /DESOBA_DATASET/Co
 python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2
 ```
 
-real composite images with one foreground object are stored in /DESOBA_DATASET/CompositeImages/2_ForegroundObject
+real composite images with one foreground object are stored in /DESOBA_DATASET/CompositeImages/2_ForegroundObject/
 
 We show some examples of real composite images in below:
 <img src='/data_processing/Visualization_Examples/r1.png' align="center" width=1024>
