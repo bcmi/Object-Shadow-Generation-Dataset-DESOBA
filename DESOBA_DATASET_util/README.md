@@ -45,12 +45,10 @@ python Vis_RealCompositionImages_fromDesoba_Dataset.py --foreground_object_num 2
 
 real composite images with one foreground object are stored in /DESOBA_DATASET/CompositeImages/2_ForegroundObject/
 
-We show some examples of real composite images in below:
-<img src='/data_processing/Visualization_Examples/r1.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r2.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r3.png' align="center" width=1024>
-<img src='/data_processing/Visualization_Examples/r4.png' align="center" width=1024>
-from left to right: synthetic composite image without foreground shadow,  foreground object mask
+We show a real composite image with one foreground object and a real composite image with two foreground objects below:
+
+<img src='/Examples/real_composite_samples.png' align="center" width=800>
+from left to right: synthetic composite image without foreground shadow,  foreground object mask, background object mask, and background shadow mask.
 
 
 
