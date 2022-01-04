@@ -181,13 +181,13 @@ to produce shadow for prepared real composite images using pretrained baseline m
 ### Test on DESOBA dataset
 - For SGRNet method:
 
- - For BOS test images, set `TESTDATA='--bos` in `/src/script/SGRNet_test.sh` and run
+ - For BOS test images, set `TESTDATA=--bos` in `/src/script/SGRNet_test.sh` and run
  ```bash
  /src/script/SGRNet_test.sh
  ```
 to conduct evaluation on BOS test images from DESOBA dataset.
 
- - For BOS-free test images, set `TESTDATA='--bosfree` in `/src/script/SGRNet_test.sh` and run
+ - For BOS-free test images, set `TESTDATA=--bosfree` in `/src/script/SGRNet_test.sh` and run
 ```bash
 /src/script/SGRNet_test.sh
 ```
