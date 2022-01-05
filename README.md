@@ -346,7 +346,7 @@ Below we present several results of different baselines on real composite images
 **From left to right:** input composite image (a), foreground object mask (b), results of Pix2Pix (c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), SGRNet (h).
 
 ## Bibtex
-If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338v1.pdf)]:**
+If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338.pdf)]:**
 
 ```
 @article{hong2021shadow,
