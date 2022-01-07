@@ -238,7 +238,7 @@ to train model on DESOBA dataset for different baseline methods, respectively.
 # Experimental Results
 
 ## Leaderboard
-Here we show the quantitative results of different methods on DESOBA test set based on Root  Mean  Square  Error  (RMSE)  and  Structural  SIMilarity index (SSIM).  Global RMSE (GRMSE) and Global SSIM (GSSIM) are  calculated  over  the  whole  image,  while  Local  RMSE (LRMSE) and Local SSIM (LSSIM) are calculated over the ground-truth foreground shadow area.
+Here we show the quantitative results of different methods on DESOBA test set based on Root  Mean  Square  Error  (RMSE)  and  Structural  SIMilarity index (SSIM).  Global RMSE (GRMSE) and Global SSIM (GSSIM) are  calculated  over  the  whole  image,  while  Local  RMSE (LRMSE) and Local SSIM (LSSIM) are calculated over the ground-truth foreground shadow area. The paper/code/model of shadow generation related methods are summarized in [Awesome-Object-Shadow-Generation](https://github.com/bcmi/Awesome-Object-Shadow-Generation). 
 
 <table class="tg">
   <tr>
@@ -345,7 +345,12 @@ Below we present several results of different baselines on real composite images
  
 **From left to right:** input composite image (a), foreground object mask (b), results of Pix2Pix (c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), SGRNet (h).
 
-## Bibtex
+# Other Resources
+
++ [Awesome-Object-Shadow-Generation](https://github.com/bcmi/Awesome-Object-Shadow-Generation)
++ [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
+
+# Bibtex
 If you find this work is useful for your research, please cite our paper using the following **BibTeX  [[arxiv](https://arxiv.org/pdf/2104.10338.pdf)]:**
 
 ```
