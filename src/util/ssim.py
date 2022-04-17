@@ -40,7 +40,8 @@ def _ssim(img1, img2, window, window_size, channel, size_average = True, mask=No
         fg_ssim = fg_ssim_map_sum/mask_sum
     fg_ssim_mu = fg_ssim.mean()
     ssim_mu = ssim_map.mean()
-    return ssim_mu.item(), fg_ssim_mu.item()
+#     return ssim_mu.item(), fg_ssim_mu.item()
+    return  fg_ssim_mu.item()
 
     # if size_average:
     #     return ssim_map.mean()
