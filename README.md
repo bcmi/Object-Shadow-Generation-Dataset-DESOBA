@@ -262,11 +262,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">7.659</th>
     <th class="tg-0pky" align="center">75.346</th>
     <th class="tg-0pky" align="center">0.927</th>    
-    <th class="tg-0pky" align="center">0.588</th>
+    <th class="tg-0pky" align="center">0.249</th>
     <th class="tg-0pky" align="center">18.875</th>
     <th class="tg-0pky" align="center">81.444</th>
     <th class="tg-0pky" align="center">0.856</th>    
-    <th class="tg-0pky" align="center">0.483</th>
+    <th class="tg-0pky" align="center">0.110</th>
   </tr>
   
   <tr>
@@ -274,11 +274,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">5.961</th>
     <th class="tg-0pky" align="center">76.046</th>
     <th class="tg-0pky" align="center">0.971</th>    
-    <th class="tg-0pky" align="center">0.612</th>
+    <th class="tg-0pky" align="center">0.253</th>
     <th class="tg-0pky" align="center">18.305</th>
     <th class="tg-0pky" align="center">81.966</th>
     <th class="tg-0pky" align="center">0.901</th>    
-    <th class="tg-0pky" align="center">0.504</th>
+    <th class="tg-0pky" align="center">0.107</th>
   </tr>
   
   <tr>
@@ -286,11 +286,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">5.985</th>
     <th class="tg-0pky" align="center">78.413</th>
     <th class="tg-0pky" align="center">0.986</th>    
-    <th class="tg-0pky" align="center">0.613</th>
+    <th class="tg-0pky" align="center">0.240</th>
     <th class="tg-0pky" align="center">19.306</th>
     <th class="tg-0pky" align="center">87.017</th>
     <th class="tg-0pky" align="center">0.918</th>    
-    <th class="tg-0pky" align="center">0.498</th>
+    <th class="tg-0pky" align="center">0.078</th>
   </tr>
   
   <tr>
@@ -298,11 +298,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">8.287</th>
     <th class="tg-0pky" align="center">79.212</th>
     <th class="tg-0pky" align="center">0.953</th>    
-    <th class="tg-0pky" align="center">0.599</th>
+    <th class="tg-0pky" align="center">0.245</th>
     <th class="tg-0pky" align="center">19.475</th>
     <th class="tg-0pky" align="center">83.457</th>
     <th class="tg-0pky" align="center">0.891</th>    
-    <th class="tg-0pky" align="center">0.500</th>
+    <th class="tg-0pky" align="center">0.109</th>
   </tr>
  
  <tr>
@@ -310,11 +310,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">6.481</th>
     <th class="tg-0pky" align="center">75.099</th>
     <th class="tg-0pky" align="center">0.983</th>    
-    <th class="tg-0pky" align="center">0.617</th>
+    <th class="tg-0pky" align="center">0.251</th>
     <th class="tg-0pky" align="center">18.723</th>
     <th class="tg-0pky" align="center">81.272</th>
     <th class="tg-0pky" align="center">0.917</th>    
-    <th class="tg-0pky" align="center">0.513</th>
+    <th class="tg-0pky" align="center">0.109</th>
   </tr>
   
   <tr>
@@ -322,11 +322,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">4.754</th>
     <th class="tg-0pky" align="center">61.762</th>
     <th class="tg-0pky" align="center">0.988</th>    
-    <th class="tg-0pky" align="center">0.684</th>
+    <th class="tg-0pky" align="center">0.380</th>
     <th class="tg-0pky" align="center">15.128</th>
     <th class="tg-0pky" align="center">61.439</th>
     <th class="tg-0pky" align="center">0.927</th>    
-    <th class="tg-0pky" align="center">0.555</th>
+    <th class="tg-0pky" align="center">0.183</th>
   </tr>
 </table>
   
