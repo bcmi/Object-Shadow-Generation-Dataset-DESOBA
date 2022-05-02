@@ -230,6 +230,8 @@ class SGRNetModel(DistangleModel):
         self.loss_rescontruction = self.MSELoss(self.final, self.shadow_img)
         self.loss = self.loss_rescontruction * self.opt.lambda_I1
         pred_real = self.netD(torch.cat([self.final, self.shadowmask_pred.detach(), self.instance_mask], 1))
+        self.loss_G_GAN = self.criterionGAN(pred_real, True)
+        self.loss += self.loss_G_GAN * self.opt.lambda_GAN
         self.shadow_param[:, [1, 3, 5]] = (self.shadow_param[:, [1, 3, 5]]) / 2 - 1.5
         self.loss_G_param = self.MSELoss(self.shadow_param_pred, self.shadow_param)
         self.loss_rescontruction_gt = self.MSELoss(self.final_gt, self.shadow_img)
