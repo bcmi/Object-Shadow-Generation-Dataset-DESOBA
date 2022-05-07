@@ -92,7 +92,7 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
 
         else:
             ## using 1 or 2 objects as foreground objects
-            if i > 2:
+            if i > 3:
                 continue
             
         for combine in selected_instance_pixel_combine:
