@@ -329,7 +329,7 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">0.183</th>
   </tr>
 </table>
-(Sorry for updating LSSIM metric for all baseline methods and our SGRNet, those LSSIM values are different from reported in AAAI paper. We have correctified the corresponding evaluation code at util/ssim.py. )
+(Sorry for updating LSSIM metric for all baseline methods and our SGRNet, those LSSIM values are different from reported in AAAI paper. The corresponding evaluation code in util/ssim.py has been corrected.)
 
 ## Visualization results on DESOBA dataset 
 Here we show some example results of different baselines on DESOBA dataset. More examples can be found in our main paper.
