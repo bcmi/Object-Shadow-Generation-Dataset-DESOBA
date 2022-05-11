@@ -251,11 +251,11 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">GRMSE</th>
     <th class="tg-0pky" align="center">LRMSE</th>
     <th class="tg-0pky" align="center">GSSIM</th>    
-    <th class="tg-0pky" align="center">LSSIM</th>
+    <th class="tg-0pky" align="center">LSSIM*</th>
     <th class="tg-0pky" align="center">GRMSE</th>
     <th class="tg-0pky" align="center">LRMSE</th>
     <th class="tg-0pky" align="center">GSSIM</th>    
-    <th class="tg-0pky" align="center">LSSIM</th>
+    <th class="tg-0pky" align="center">LSSIM*</th>
   </tr>
   <tr>
     <th class="tg-0pky" align="center">Pix2Pix</th>
@@ -329,7 +329,8 @@ Here we show the quantitative results of different methods on DESOBA test set ba
     <th class="tg-0pky" align="center">0.183</th>
   </tr>
 </table>
-(Sorry for updating LSSIM metric for all baseline methods and our SGRNet, those LSSIM values are different from reported in AAAI paper. The corresponding evaluation code in util/ssim.py has been corrected.)
+
+<font size=2.5>**\***: Note that the LSSIM results in official AAAI paper are miscalculated due to a bug in the evaluation code util/ssim.py. We sincerely apologize for this mistake and have updated the results in arXiv. </font>
 
 ## Visualization results on DESOBA dataset 
 Here we show some example results of different baselines on DESOBA dataset. More examples can be found in our main paper.
