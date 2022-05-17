@@ -53,7 +53,7 @@ bg_instance_path=${dataroot}'/InstanceMask'
 
 
 
-OTHER="--save_epoch_freq 1 --display_freq 100 --niter 500 --niter_decay 2000  --no_crop --no_flip --no_rotate "
+OTHER="--save_epoch_freq 1 --display_freq 100 --niter 100 --niter_decay 300  --no_crop --no_flip --no_rotate "
 
 CMD="python ../train.py --loadSize ${loadSize} \
     --name ${NAME} \
