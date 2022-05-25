@@ -150,6 +150,11 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
             #     continue
             # if shadow_ratio <= 0.04 or shadow_ratio>0.08:
             #     continue
+            
+            if is_train:
+                ## selection
+                if shadow_ratio < 0.002:
+                    continue
 
             fg_instance = Image.fromarray(np.uint8(fg_instance), mode='L')
             fg_shadow = Image.fromarray(np.uint8(fg_shadow), mode='L')
