@@ -143,14 +143,6 @@ def generate_training_pairs(newwh, shadow_image, deshadowed_image, instance_mask
             shadow_object_ratio = np.sum(fg_shadow/255) / np.sum(fg_instance/255)
             whole_area = np.ones(np.shape(fg_shadow))
             shadow_ratio = np.sum(fg_shadow/255) / np.sum(whole_area)
-            ###split area according shadow ratio
-            # if shadow_ratio > 0.02:
-            #     continue
-            # if shadow_ratio <= 0.02 or shadow_ratio>0.04:
-            #     continue
-            # if shadow_ratio <= 0.04 or shadow_ratio>0.08:
-            #     continue
-            
             if is_train:
                 ## selection
                 if shadow_ratio < 0.002:
