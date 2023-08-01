@@ -74,7 +74,7 @@ We show a real composite image with one foreground object and a real composite i
 
 **From left to right:** synthetic composite image without foreground shadow,  foreground object mask, background object mask, background shadow mask.
 
-To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Google Drive**]([https://pan.baidu.com/s/1MNjYakGeiHphCBz0IpGrug](https://drive.google.com/drive/folders/1aB3cQi6YZeg31hSOQMPI5KbETQQmqq4f?usp=drive_link)).
+To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Google Drive**](https://drive.google.com/drive/folders/1aB3cQi6YZeg31hSOQMPI5KbETQQmqq4f?usp=drive_link).
 
 
 ## Dataloader preparation for your own project
