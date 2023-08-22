@@ -19,6 +19,10 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We
 
 We  refer  to  the  test  image pairs with Background Object-Shadow (BOS) pairs as **BOS test image pairs** (from left to right in the left subfigure: synthetic composite image, foreground object mask, background object mask,background shadow mask, and ground-truth target image), and the remaining ones as **BOS-free test image pairs** (from left to right in the right subfigure: synthetic composite image, foreground object mask, and ground-truth target image). 
 
+## Extended to DESOBAv2
+
+We have extended our DESOBA dataset to [DESOBAv2](https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBAv2) with more images and object-shadow pairs. 
+
 
 ## Visualizing training/testing pairs of DESOBA dataset
 
