@@ -1,3 +1,6 @@
+# ![hot](https://bcmi.sjtu.edu.cn/~niuli/images/fire.png) Our lab has released the image composition toolbox [libcom](https://github.com/bcmi/libcom), which integrates all the functions related to image composition. The toolbox would be continuously upgraded. Welcome to visit and try :-)
+---
+
 # Problem Definition
 
 **Object Shadow Generation** is to deal with the shadow inconsistency between the foreground object and the background in a composite image, that is, generating plausible shadow for the foreground object according to background information, to make the composite image more realistic.
