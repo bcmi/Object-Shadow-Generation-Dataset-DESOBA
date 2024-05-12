@@ -21,7 +21,7 @@ We  refer  to  the  test  image pairs with Background Object-Shadow (BOS) pairs 
 
 ## Extended to DESOBAv2
 
-We have extended our DESOBA dataset to [DESOBAv2](https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBAv2) with more images and object-shadow pairs. 
+We have extended our DESOBA dataset to [DESOBAv2](https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBAv2) with more images and object-shadow pairs.  In  [DESOBAv2](https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBAv2),  we also propose a diffusion-based method SGDiffusion, which can achieve much better results. 
 
 
 ## Visualizing training/testing pairs of DESOBA dataset
