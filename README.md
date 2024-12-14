@@ -13,7 +13,7 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We
 
 # Our DESOBA Dataset
 
-**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1aB3cQi6YZeg31hSOQMPI5KbETQQmqq4f?usp=drive_link).
+**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing)
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
@@ -78,7 +78,7 @@ We show a real composite image with one foreground object and a real composite i
 
 **From left to right:** synthetic composite image without foreground shadow,  foreground object mask, background object mask, background shadow mask.
 
-To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Google Drive**](https://drive.google.com/drive/folders/1aB3cQi6YZeg31hSOQMPI5KbETQQmqq4f?usp=drive_link).
+To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Google Drive**](https://drive.google.com/drive/folders/1CspARS6nBVQhF0we-jro8N5PRnfTizxM?usp=sharing).
 
 
 ## Dataloader preparation for your own project
