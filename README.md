@@ -13,7 +13,7 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We
 
 # Our DESOBA Dataset
 
-**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing)
+**Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Dropbox**](https://www.dropbox.com/scl/fi/h9uoif9upyxzf5nf5tz8r/DESOBA_DATASET.zip?rlkey=6qpmtbdjwnexj28vlzdaagtvm&st=lbntxz9n&dl=0)
  
  <img src='Examples/dataset-samples.png' align="center" width=1024>
 
@@ -78,7 +78,7 @@ We show a real composite image with one foreground object and a real composite i
 
 **From left to right:** synthetic composite image without foreground shadow,  foreground object mask, background object mask, background shadow mask.
 
-To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Google Drive**](https://drive.google.com/drive/folders/1CspARS6nBVQhF0we-jro8N5PRnfTizxM?usp=sharing).
+To evaluate the effectiveness of different methods in real scenarios, we prepare 100 real composite images including 74 images with one foreground object and 26 images with two foreground objects. We provide 100 real composite images in  [**Baidu Cloud**](https://pan.baidu.com/s/1HAYpUefHSI7yWGzIVwT9Rg) (access code: yy77), or [**Dropbox**](https://www.dropbox.com/scl/fo/19b7b7y1j4p576osl9y0j/AL56y3a43GZMs3xPJGp489E?rlkey=bljcp8qhmi9xs3j85tbhw6xn2&st=qor19frl&dl=0).
 
 
 ## Dataloader preparation for your own project
@@ -119,10 +119,10 @@ git clone https://github.com/bcmi/Object-Shadow-Generation-Dataset-DESOBA.git
 cd Object-Shadow-Generation-Dataset-DESOBA
 ```
 
-- Download the DESOBA dataset from [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1juSZ2lZSRRkSPy0G-68Zo2Qozver4KEE?usp=sharing). Save it at `/DESOBA_DATASET/`.
+- Download the DESOBA dataset from [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Dropbox**](https://www.dropbox.com/scl/fi/h9uoif9upyxzf5nf5tz8r/DESOBA_DATASET.zip?rlkey=6qpmtbdjwnexj28vlzdaagtvm&st=lbntxz9n&dl=0). Save it at `/DESOBA_DATASET/`.
 
 
-- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1QWXtM58bMx4N0yHT-BJrpA) (access code:1234), or [**Google Drive**](https://drive.google.com/drive/folders/16isd7fPUHW1uaW3oGniCYZqhVve5zCN1?usp=sharing). Save it at `/TrainedModels/`.
+- Download the pretrained model of SGRNet and baseline methods from [**Baidu Cloud**](https://pan.baidu.com/s/1QWXtM58bMx4N0yHT-BJrpA) (access code:1234), or [**Dropbox**](https://www.dropbox.com/scl/fo/4dtypp5pltnhzsr1m3z1v/AEKYwPbPXoSFbfo0aDjat_w?rlkey=bbfk7iwvcmyot6t90ij0fze70&st=364vvg9h&dl=0). Save it at `/TrainedModels/`.
 
 ### Data preparation
 
@@ -345,7 +345,7 @@ Here we show some example results of different baselines on DESOBA dataset. More
 (c), Pix2Pix-Res (d), ShadowGAN (e), Mask-ShadowGAN (f), ARShadowGAN (g), our SGRNet (h), ground-truth (i). The results on BOS test images are shown in row 1-2, and the results on  BOS-free  test images are shown in row 3-4).
 
 ## Visualization results on real composite images 
-Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1mYMfK0fMjdmFlBkSyoIiMg) (access code: 1234), or [**Google Drive**](https://drive.google.com/drive/folders/1CspARS6nBVQhF0we-jro8N5PRnfTizxM?usp=sharing).
+Below we present several results of different baselines on real composite images. The 100 real composite images could be found in [**Baidu Cloud**](https://pan.baidu.com/s/1mYMfK0fMjdmFlBkSyoIiMg) (access code: 1234), or [**Dropbox**](https://www.dropbox.com/scl/fo/19b7b7y1j4p576osl9y0j/AL56y3a43GZMs3xPJGp489E?rlkey=bljcp8qhmi9xs3j85tbhw6xn2&st=tkm4o7u6&dl=0).
  
 <img src='/Examples/composite_images_supp.png' align="center" width=1024>
  
