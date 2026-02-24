@@ -11,6 +11,12 @@ Our dataset **DESOBA** is a synthesized dataset for Object Shadow Generation. We
 
 **Illustration of shadow generation task (bottom flow):**  Given I<sub>c</sub> and its foreground object mask M<sub>fo</sub>, we aim to reconstruct the target image I<sub>g</sub> with foreground shadow.
 
+# Online Demo
+
+Try this [online demo](http://libcom.ustcnewly.com/) for image composition (object insertion) built upon [libcom](https://github.com/bcmi/libcom) toolbox and have fun!
+
+[![]](https://github.com/user-attachments/assets/87416ec5-2461-42cb-9f2d-5030b1e1b5ec)
+
 # Our DESOBA Dataset
 
 **Our DESOBA dataset contains 839 training images with totally 2,995 object-shadow pairs and 160 test images with totally 624 object-shadow pairs.** Note that we discard one complex training image from SOBA. During testing, we ignore 9 object-shadow pairs with too small shadows after the whole image is resized to 256×256, resulting in 615 test image pairs.The DESOBA dataset is provided in [**Baidu Cloud**](https://pan.baidu.com/s/1zKCMTXPJcYPbOoHEHcSPkQ) (access code: 1234), or [**Dropbox**](https://www.dropbox.com/scl/fi/h9uoif9upyxzf5nf5tz8r/DESOBA_DATASET.zip?rlkey=6qpmtbdjwnexj28vlzdaagtvm&st=lbntxz9n&dl=0)
