@@ -217,7 +217,7 @@ class BaseModel():
                         self.__patch_instance_norm_state_dict(state_dict, net, key.split('.'))
                     net.load_state_dict(state_dict)
                 else:
-                    print('falied loading the model from %s' % load_path)
+                    print('failed loading the model from %s' % load_path)
 
 
 
