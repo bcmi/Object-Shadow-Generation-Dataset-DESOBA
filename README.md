@@ -1,3 +1,8 @@
+Welcome to scan the WeChat QR code to join the discussion group on image composition/compositing, object insertion/addition.
+<p align="center">
+<img width="150" height="150" alt="Image" src="https://github.com/user-attachments/assets/8572a7c4-0f62-4a5f-bc06-9a1d9fcb14e3" />
+</p>
+
 # Problem Definition
 
 **Object Shadow Generation** is to deal with the shadow inconsistency between the foreground object and the background in a composite image, that is, generating plausible shadow for the foreground object according to background information, to make the composite image more realistic.
